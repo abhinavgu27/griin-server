@@ -1,5 +1,5 @@
 package com.abhinav.griinserver
-
+import org.springframework.web.bind.annotation.GetMapping to the top of HazardController.kt.
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
