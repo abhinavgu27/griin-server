@@ -16,4 +16,9 @@ class HazardController(private val repository: HazardRepository) {
         println("🟢 HAZARD RECEIVED FROM APP!!! Latitude: ${report.latitude}")
         return ResponseEntity.ok().build()
     }
+    @GetMapping
+    fun getAllHazards(): ResponseEntity<List<HazardReport>> {
+        val hazards = repository.findAll()
+        return ResponseEntity.ok(hazards) // This sends the full list from Neon to the app
+    }
 }
