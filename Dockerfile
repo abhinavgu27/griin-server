@@ -11,7 +11,7 @@ COPY . .
 RUN chmod +x gradlew
 
 # Build the Spring Boot application
-RUN ./gradlew bootJar --no-daemon
+RUN ./gradlew bootJar -x test --no-daemon
 
 # Expose port 8080 (the cloud standard)
 EXPOSE 8080
